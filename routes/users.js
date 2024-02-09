@@ -3,7 +3,7 @@ const router = express.Router();
 
 const User = require("../models/User");
 
-router.post("/users", (req, res) => {
+router.post("/", (req, res) => {
   const username = req.body.username;
 
   if (!username) {
@@ -21,7 +21,7 @@ router.post("/users", (req, res) => {
     });
 });
 
-router.get("/users", (req, res) => {
+router.get("/", (_, res) => {
   User.find()
     .then((users) => {
       res.json(users);
