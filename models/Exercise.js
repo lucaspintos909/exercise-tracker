@@ -11,4 +11,4 @@ let ExerciseSchema = new mongoose.Schema({
 // Model
 let ExerciseModel = mongoose.model("exercise", ExerciseSchema);
 
-export { ExerciseModel };
+module.exports = ExerciseModel;
